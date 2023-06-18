@@ -34,8 +34,6 @@ public class BookReviewDriver extends Configured implements Tool {
 
     @Override
     public int run(String[] args) throws Exception {
-      // args = new String[] {"books.data", "output"};
-
         if (args.length != 2) {
             System.err.printf("Usage: %s [generic options] <input1> <output>\n", getClass().getSimpleName());
             ToolRunner.printGenericCommandUsage(System.err);

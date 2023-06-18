@@ -38,7 +38,12 @@ public class TupleSortingDriver extends Configured implements Tool {
      * @throws Exception исключительная ситуация
      */
     public int run(final String[] args) throws Exception {
-        // args = new String[] {"names.data", "output"};
+        if (args.length != 2) {
+            System.err.printf("Usage: %s [generic options] <input1> <output>\n", getClass().getSimpleName());
+            ToolRunner.printGenericCommandUsage(System.err);
+            return -1;
+        }
+
         String input = args[0];
         String output = args[1];
 
